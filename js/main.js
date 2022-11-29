@@ -9,7 +9,7 @@ function createElemWithText(tag = 'p', text = '', classes = '') {
   
 function createSelectOptions(jsonData) {
     if(!jsonData) {
-        return undefined;
+        return;
     }
 
     const optionsArray = [];
@@ -25,7 +25,7 @@ function createSelectOptions(jsonData) {
 
 function toggleCommentSection(postId) {
     if(postId===undefined) {
-        return undefined;
+        return;
     }
   
     const section = document.querySelector(`section[data-post-id='${postId}']`);
@@ -39,7 +39,7 @@ function toggleCommentSection(postId) {
 
 function toggleCommentButton(postId) {
     if(postId===undefined) {
-        return undefined;
+        return;
     }
     
     const button = document.querySelector(`button[data-post-id='${postId}']`);
@@ -55,7 +55,7 @@ function toggleCommentButton(postId) {
 
 function deleteChildElements(parentElement) {
     if(!parentElement || !(parentElement instanceof HTMLElement)) {
-        return undefined;
+        return;
     }
     
     let child = parentElement.lastElementChild;
@@ -98,7 +98,7 @@ function removeButtonListeners() {
 
 function createComments(jsonData) {
     if(!jsonData) {
-        return undefined;
+        return;
     }
 
     const fragment = new DocumentFragment();
@@ -116,7 +116,7 @@ function createComments(jsonData) {
 
 function populateSelectMenu(jsonData) {
     if(!jsonData) {
-        return undefined;
+        return;
     }
 
     const selectMenu = document.getElementById('selectMenu');
@@ -143,7 +143,7 @@ async function getUsers() {
 
 async function getUserPosts(userID) {
     if(userID===undefined){
-        return undefined;
+        return;
     }
 
     try {
@@ -156,7 +156,7 @@ async function getUserPosts(userID) {
 
 async function getUser(userID) {
     if(userID===undefined){
-        return undefined;
+        return;
     }
 
     try {
@@ -170,7 +170,7 @@ async function getUser(userID) {
 
 async function getPostComments(postId) {
     if(postId===undefined) {
-        return undefined;
+        return;
     }
 
     try {
@@ -183,7 +183,7 @@ async function getPostComments(postId) {
 
 async function displayComments(postId) {
     if(postId===undefined) {
-        return undefined;
+        return;
     }
 
     const section = document.createElement('section');
@@ -199,7 +199,7 @@ async function displayComments(postId) {
 
 async function createPosts(jsonData) {
     if(!jsonData) {
-        return undefined;
+        return;
     }
 
     const fragment = new DocumentFragment();
@@ -236,7 +236,7 @@ async function displayPosts(posts) {
 
 function toggleComments(event,postId) {
     if(!event || postId===undefined) {
-        return undefined;
+        return;
     }
 
     event.target.listener = true;
@@ -249,7 +249,7 @@ function toggleComments(event,postId) {
 
 async function refreshPosts(jsonData) {
     if(!jsonData) {
-        return undefined;
+        return;
     }
 
     const removedButtons = removeButtonListeners();
@@ -263,7 +263,7 @@ async function refreshPosts(jsonData) {
 
 async function selectMenuChangeEventHandler(event) {
     if(!event) {
-        return undefined;
+        return;
     }
 
     const selectMenu = document.getElementById('selectMenu');
