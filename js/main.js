@@ -24,7 +24,7 @@ function createSelectOptions(jsonData) {
 
 
 function toggleCommentSection(postId) {
-    if(!postId) {
+    if(postId===undefined) {
         return undefined;
     }
   
@@ -38,7 +38,7 @@ function toggleCommentSection(postId) {
 
 
 function toggleCommentButton(postId) {
-    if(!postId) {
+    if(postId===undefined) {
         return undefined;
     }
     
@@ -142,7 +142,7 @@ async function getUsers() {
 
 
 async function getUserPosts(userID) {
-    if(!userID){
+    if(userID===undefined){
         return undefined;
     }
 
@@ -155,7 +155,7 @@ async function getUserPosts(userID) {
 
 
 async function getUser(userID) {
-    if(!userID){
+    if(userID===undefined){
         return undefined;
     }
 
@@ -169,7 +169,7 @@ async function getUser(userID) {
 
 
 async function getPostComments(postId) {
-    if(!postId) {
+    if(postId===undefined) {
         return undefined;
     }
 
@@ -182,7 +182,7 @@ async function getPostComments(postId) {
 
 
 async function displayComments(postId) {
-    if(!postId) {
+    if(postId===undefined) {
         return undefined;
     }
 
@@ -235,7 +235,7 @@ async function displayPosts(posts) {
 
 
 function toggleComments(event,postId) {
-    if(!event || !postId) {
+    if(!event || postId===undefined) {
         return undefined;
     }
 
